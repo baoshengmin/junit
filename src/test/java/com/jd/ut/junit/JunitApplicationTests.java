@@ -16,8 +16,4 @@ public class JunitApplicationTests {
         openMocks(this);
     }
 
-    @Test
-    public void contextLoads() {
-    }
-
 }
