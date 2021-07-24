@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.ut.junit.dao.OutlineMapper">
+  <resultMap id="BaseResultMap" type="com.jd.ut.junit.domain.Outline">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="pid" jdbcType="BIGINT" property="pid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="olevel" jdbcType="TINYINT" property="olevel" />
+    <result column="is_leaf" jdbcType="TINYINT" property="isLeaf" />
+    <result column="opath" jdbcType="VARCHAR" property="opath" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
+    <result column="business_type" jdbcType="TINYINT" property="businessType" />
+  </resultMap>
+
+  <update id="delete" parameterType="com.jd.ut.junit.domain.Outline">
+    update cfg_outline
+    SET is_delete = 1
+    WHERE
+      id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
